@@ -1,47 +1,47 @@
 package com.nikhila.sampleproject.nikhilalearningfullstackappangularspringboot.model.response;
 
-import com.nikhila.sampleproject.nikhilalearningfullstackappangularspringboot.model.Links;
+import java.time.LocalDate;
 
 public class ReservationResponse {
 
 	private Long Id;
-	private Integer roomNumber;
-	private Integer price;
-	private Links links;
-	
+
+	private LocalDate CheckIn;
+
+	private LocalDate CheckOut;
+
 	public ReservationResponse() {
 		super();
 	}
-	
-	public ReservationResponse(Integer roomNumber, Integer price) {
+
+	public ReservationResponse(Long id, LocalDate checkIn, LocalDate checkOut) {
 		super();
-		this.roomNumber = roomNumber;
-		this.price = price;
+		Id = id;
+		CheckIn = checkIn;
+		CheckOut = checkOut;
 	}
+
 	public Long getId() {
 		return Id;
 	}
+
 	public void setId(Long id) {
 		Id = id;
 	}
-	public Integer getRoomNumber() {
-		return roomNumber;
+
+	public LocalDate getCheckIn() {
+		return CheckIn;
 	}
-	public void setRoomNumber(Integer roomNumber) {
-		this.roomNumber = roomNumber;
+
+	public void setCheckIn(LocalDate checkIn) {
+		CheckIn = checkIn;
 	}
-	public Integer getPrice() {
-		return price;
+
+	public LocalDate getCheckOut() {
+		return CheckOut;
 	}
-	public void setPrice(Integer price) {
-		this.price = price;
+
+	public void setCheckOut(LocalDate checkOut) {
+		CheckOut = checkOut;
 	}
-	public Links getLinks() {
-		return links;
-	}
-	public void setLinks(Links links) {
-		this.links = links;
-	}
-	
-	
 }
